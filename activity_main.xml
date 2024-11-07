@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header Container -->
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginTop="-5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textViewWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:text="username" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Laporan"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Ganti Button dengan ImageButton untuk menu dropdown -->
+            <ImageButton
+                android:id="@+id/buttonMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_vert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:contentDescription="Menu"/>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <!-- ListView for reports list -->
+        <ListView
+            tools:listitem="@layout/item_report"
+            android:id="@+id/listViewReports"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="80dp"
+            android:paddingTop="30dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:elevation="6dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-100dp"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="-100dp"
+        android:layout_marginBottom="87dp"
+        android:background="@drawable/blok_radius"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawablePadding="0dp"
+        android:drawableTint="@color/black"
+        android:padding="11dp"
+        android:textSize="15sp" />
+
+</RelativeLayout>
